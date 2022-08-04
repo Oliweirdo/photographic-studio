@@ -1,13 +1,437 @@
 @import "~normalize.css";
 
 @import "_variables";
-@import "modules/hello.scss";
+
+@import "modules/gallery.scss";
+@import "modules/contact.scss";
+@import "modules/lightbox.scss";
+@import "modules/portfolio.scss";
+@import "modules/quotes.scss";
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Cinzel&display=swap");
+
+
+
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  font-family: "Ibarra Real Nova", serif;
+
+
+  @media (max-width: 786px) {
+    overflow-x: hidden;
+  }
+}
 
 body {
-  background: $wtf;
-  color: #fff;
-  display: flex;
+  background-color: $bgcolor;
+}
+
+
+.about {
+  background-color: $bgcolor;
+  color: $btext;
   align-items: center;
-  justify-content: center;
-  min-height: 100vh;
+
+  @media (max-width: 500px) {
+    padding-bottom: 20px;
+  }
+}
+
+header {
+  background-color: black;
+}
+
+.title {
+  font-family: "Cinzel", serif;
+  text-align: center;
+  color: $titlecolor;
+  padding-top: 20px;
+
+  @media (max-width: 500px) {
+    font-size: 20px;
+    overflow: hidden;
+  }
+}
+
+.title__small {
+  font-family: "Cinzel", serif;
+  text-align: center;
+  color: $titlecolor;
+  padding-top: 20px;
+
+  @media (max-width: 500px) {
+    font-size: 15px;
+    overflow: hidden;
+  }
+}
+
+.title__main,
+.subtitle {
+  font-family: "Cinzel", serif;
+  text-align: center;
+  color: $titlecolor;
+  padding-top: 150px;
+  padding-bottom: 20px;
+
+  @media (max-width: 500px) {
+    font-size: 20px;
+    padding-top: 30px;
+  }
+}
+
+.subtitle {
+  padding-top: 200px;
+
+  @media (max-width: 500px) {
+    font-size: 20px;
+    padding-top: 30px;
+  }
+}
+
+.portrait_small {
+  padding-top: 70px;
+  width: 600px;
+  border-bottom: 5px double;
+
+  @media (max-width: 500px) {
+    width: 300px;
+    padding: 0;
+  }
+}
+
+.portrait__small__main {
+  padding-top: 70px;
+  width: 600px;
+  border-bottom: 5px double;
+
+  @media (max-width: 500px) {
+    width: 300px;
+
+    margin-left: 15px;
+    margin-right: auto;
+
+
+
+  }
+}
+
+
+.lead__about {
+  margin: 0 auto;
+  text-align: center;
+  align-items: center;
+  padding-top: 150px;
+  height: auto;
+  font-size: 1vw;
+  text-align: justify;
+  background-color: $bgcolor;
+
+  @media (max-width: 500px) {
+    font-size: 13px;
+    max-width: 350px;
+    padding-top: 50px;
+  }
+}
+
+.right__side__about,
+.left__side__about {
+  padding-top: 50px;
+  text-align: center;
+  align-items: center;
+  font-size: 1vw;
+  max-width: 600px;
+  margin: 0 auto;
+  padding-bottom: 25px;
+  text-align: justify;
+  background-color: $bgcolor;
+
+  @media (max-width: 500px) {
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-top: 0;
+    width: 300px;
+  }
+}
+
+.right__side,
+.left__side {
+  text-align: center;
+  align-items: center;
+  font-size: 1vw;
+  max-width: 600px;
+  margin: 0 auto;
+  padding-top: 50px;
+  padding-bottom: 25px;
+  text-align: justify;
+
+  @media (max-width: 500px) {
+    padding-left: 0px;
+    padding-bottom: 10px;
+    padding-top: 0;
+    width: 300px;
+  }
+}
+
+.aboutme {
+  margin: 0 auto;
+}
+
+.right__side__about {
+  margin: 0 auto;
+
+  @media (max-width: 500px) {
+    padding-bottom: 50px;
+    padding-top: 0;
+    width: 400px;
+  }
+}
+
+li {
+  list-style: none;
+  text-transform: uppercase;
+  font-size: smaller;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+a {
+  color: aliceblue;
+  text-decoration: none;
+  transition: 0.7s ease;
+
+  &:hover {
+    color: $pink;
+  }
+}
+
+.nav {
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  padding-top: 10px;
+  opacity: 50%;
+  color: $pink;
+  font-family: "Cinzel", serif;
+
+  &-logo {
+    height: 75px;
+    width: auto;
+    justify-content: space-between;
+  }
+
+  &-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+
+    @media (max-width: 500px) {
+      position: fixed;
+      left: -100%;
+      top: 70px;
+      gap: 0;
+      flex-direction: column;
+      background: black;
+      width: 100%;
+      text-align: center;
+      transition: 0.3s;
+
+      &.active {
+        left: 0;
+        position: relative;
+        padding-bottom: 50px;
+      }
+    }
+  }
+
+  &-link {
+    transition: 0.7s ease;
+    font-family: "Cinzel", serif;
+    color: $pink;
+
+    &:hover {
+      color: $pink;
+    }
+  }
+
+  &-item {
+    @media (max-width: 786px) {
+      margin: 16px;
+      background: none;
+    }
+  }
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 5px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  background-color: white;
+}
+
+
+.mainpage {
+  border-radius: 50%;
+  max-height: 400px;
+  width: auto;
+}
+
+
+.parallax {
+  min-height: 70vh;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: black;
+  -webkit-background-size: 100% auto;
+  -moz-background-size: 100% auto;
+  -o-background-size: 100% auto;
+  background-image: url("/src/assets/img/background1.png");
+
+  @media (max-width: 750px) {
+    background-attachment: inherit !important;
+    min-height: 20vh;
+  }
+}
+
+
+.parallax2 {
+  min-height: 70vh;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: black;
+  -webkit-background-size: 100% auto;
+  -moz-background-size: 100% auto;
+  -o-background-size: 100% auto;
+  background-image: url("/src/assets/img/portfolio/8.jpg");
+
+  @media (max-width: 786px) {
+    background-attachment: inherit !important;
+    min-height: 35vh;
+
+  }
+}
+
+
+.portrait {
+  width: 600px;
+  height: auto;
+  padding-top: 150px;
+  border-bottom: double 5px rgba(0, 0, 0, 0.5);
+
+  @media (max-width: 786px) {
+    width: 300px;
+    font-size: 13px;
+    overflow-x: hidden;
+    padding-top: 50px;
+    margin: 0 auto;
+    justify-content: center;
+    margin-left: 50px;
+  }
+}
+
+.thanks {
+  padding: 150px 50px 150px 50px;
+  opacity: 100%;
+}
+
+.footer {
+  color: aliceblue;
+  justify-content: space-between;
+  font-family: "Ibarra Real Nova", serif;
+  flex-shrink: 0;
+
+  @media (max-width: 500px) {
+    padding-top: 50px;
+    margin: 0 auto;
+    justify-content: center;
+
+  }
+
+  &__logo {
+    display: block;
+    height: 200px;
+    width: auto;
+    padding-top: 25px;
+    padding-left: 50px;
+
+    @media (max-width: 500px) {
+      width: 200px;
+      height: auto;
+      padding: 0;
+      margin: 0 auto;
+    }
+  }
+}
+
+.col {
+  opacity: 50%;
+  padding-top: 20px;
+  margin: 0 auto;
+
+  @media (max-width: 500px) {
+    text-align: center;
+    align-items: center;
+
+  }
+}
+
+
+.footer {
+  color: aliceblue;
+  background-color: black;
+  text-decoration-style: solid;
+  text-align: justify;
+  margin: 0 auto;
+
+  @media (max-width: 500px) {
+    text-align: center;
+    margin: 0 auto;
+
+  }
+}
+
+.svg {
+  padding-top: 20px;
+}
+
+@media (max-width: 786px) {
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
 }

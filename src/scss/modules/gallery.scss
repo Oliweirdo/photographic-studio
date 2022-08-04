@@ -1,0 +1,245 @@
+@import "_variables";
+
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+
+    @media (max-width: 500px) {
+        margin: 0 auto;
+        overflow-x: hidden;
+
+    }
+}
+
+@supports (display: grid) {
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+        grid-gap: 4rem;
+    }
+
+    .gallery,
+    .gallery-image {
+        margin: 0;
+        width: 600;
+        height: 400;
+
+        @media (max-width: 750px) {
+            width: 300px;
+            height: auto;
+
+        }
+    }
+
+
+}
+
+.offer {
+    padding: 8px;
+    width: 1000px;
+    margin: 0 auto;
+
+    @media (max-width: 750px) {
+        padding: 0;
+        padding-top: 2px;
+        width: 300px;
+        display: block;
+    }
+}
+
+
+.centered {
+    margin: 0 auto;
+    width: 1400px;
+
+    @media (max-width: 786px) {
+        width: 350px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    &__small {
+        padding-top: 100px;
+        padding-bottom: 50px;
+        margin: 0 auto;
+        width: 1000px;
+
+        @media (max-width: 786px) {
+            width: 300px;
+            margin: 0 auto;
+            display: block;
+        }
+    }
+}
+
+
+
+.grid__large {
+    box-sizing: content-box;
+    align-items: center;
+    display: block;
+    justify-content: center;
+}
+
+.grid__large>img {
+    padding: 8px;
+    width: 1400px;
+    box-sizing: padding-box;
+
+    @media (max-width: 786px) {
+        padding: 0;
+        padding-top: 2px;
+        padding-right: 3px;
+        width: 350px;
+        display: block;
+    }
+}
+
+
+.grid__double .a {
+    --gap: 8px;
+    --num-cols: 2;
+    padding: var(--gap);
+    width: 140px;
+    padding-right: 0;
+    display: grid;
+    grid-template-columns: repeat(var(--num-cols), 1fr);
+}
+
+.grid__double>img {
+    width: 693px;
+    height: auto;
+    padding-top: 5px;
+    padding-bottom: 7px;
+    padding-left: 7px;
+
+    @media (max-width: 500px) {
+        padding-top: 3px;
+        padding-left: 0;
+        padding-bottom: 3px;
+        width: 172px;
+    }
+}
+
+.grid__triple .a {
+    --gap: 5px;
+    --num-cols: 3;
+    padding: var(--gap);
+    width: 1400px;
+
+    padding-right: 5px;
+    display: grid;
+    grid-template-columns: repeat(var(--num-cols), 1fr);
+    gap: var(--gap);
+    padding-left: 3px;
+
+    @media (max-width: 750px) {
+        gap: 5px;
+    }
+}
+
+.grid__triple>img {
+    width: 461px;
+    height: auto;
+    padding-bottom: 5px;
+    padding-left: 7px;
+
+
+    @media (max-width: 750px) {
+        padding-top: 2px;
+        padding-left: 0;
+        padding-right: 0;
+        width: 113px;
+        padding-bottom: 2px;
+    }
+}
+
+.grid__small .a {
+    --gap: 5px;
+    --num-cols: 3;
+    padding: var(--gap);
+    width: 900px;
+
+    padding-right: 5px;
+    display: grid;
+    grid-template-columns: repeat(var(--num-cols), 1fr);
+    gap: var(--gap);
+
+    @media (max-width: 500px) {
+        padding: 0;
+    }
+}
+
+.grid__penta .a {
+    --gap: 5px;
+    --num-cols: 5;
+    padding: var(--gap);
+    width: 1400px;
+
+    padding-right: 5px;
+    display: grid;
+    grid-template-columns: repeat(var(--num-cols), 1fr);
+    gap: var(--gap);
+}
+
+.grid__penta>img {
+    width: auto;
+    height: 320px;
+    padding-bottom: 5px;
+
+    @media (max-width: 500px) {
+        padding-top: 2px;
+        width: auto;
+        height: 80px;
+    }
+}
+
+
+
+
+.grid__quadra>img {
+    width: 345px;
+    height: auto;
+    max-height: 450px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-left: 7px;
+
+    @media (max-width: 786px) {
+        padding: 1px;
+        padding-top: 3px;
+        padding-bottom: 3px;
+        width: 84px;
+        gap: 1px;
+        max-height: 128.66px
+    }
+}
+
+.grid__small>img {
+    width: 330px;
+    height: auto;
+    max-height: 450px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+
+    @media (max-width: 786px) {
+        padding: 1px;
+        width: 96px;
+        gap: 1px;
+    }
+}
+
+.image__grid__other>img {
+    width: auto;
+    max-height: 300px;
+    padding-bottom: 2px;
+    padding-top: 5px;
+
+    @media (max-width: 500px) {
+        padding: 2px;
+        width: auto;
+        gap: 2px;
+        height: 70px;
+    }
+}

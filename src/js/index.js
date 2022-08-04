@@ -1,9 +1,32 @@
 import '../scss/main.scss';
 
-// uncomment the lines below to enable PWA
-// import {registerSW} from './pwa.js';
-// registerSW();
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
 
-/* place your code below */
+hamburger.addEventListener("click", ()=>{
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+})
 
-console.log('HELLO 🚀')
+document.querySelectorAll(".nav-link").forEach(n => n.
+    addEventListener("click",() => {
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("active");
+    }))
+
+    document.getElementById('protect').onClick = function run() {
+        var testV = 1;
+        var pass1 = prompt('Strona dostępna jest wyłącznie dla klientów. Proszę podaj hasło by przejść dalej.',' ');
+        while (testV < 2) {
+            if (pass1.toLowerCase() == "tost") {
+                open('prepare.html');
+                break;
+            } 
+            testV+=1;
+            var pass1 = prompt('Odmowa dostępu, hasło jest nieprawidłowe. Wpisz hasło ponownie.','Password');
+        }
+        if (pass1.toLowerCase()!="password" & testV ==3) history.go(-1);
+        return " ";
+    }
+    
+    

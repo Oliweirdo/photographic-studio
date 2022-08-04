@@ -44,6 +44,8 @@
     "websocket-extensions": "^0.1.4"
   },
   "dependencies": {
-    "normalize.css": "^8.0.1"
+    "bootstrap": "^4.4.1",
+    "normalize.css": "^8.0.1",
+    "run": "^1.4.0"
   }
 }
