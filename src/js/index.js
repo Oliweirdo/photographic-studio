@@ -1,5 +1,6 @@
 import '../scss/main.scss';
 
+
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 const image=document.querySelector("#protect");

@@ -46,6 +46,7 @@
   "dependencies": {
     "bootstrap": "^4.4.1",
     "core-js-compat": "^3.4.7",
+    "jquery": "^3.6.0",
     "normalize.css": "^8.0.1",
     "run": "^1.4.0"
   }
