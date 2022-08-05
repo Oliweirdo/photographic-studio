@@ -308,7 +308,7 @@ a {
   -webkit-background-size: 100% auto;
   -moz-background-size: 100% auto;
   -o-background-size: 100% auto;
-  background-image: url("/src/assets/img/background1.png");
+  background-image: url("../assets/img/background1.png");
 
   @media (max-width: 750px) {
     background-attachment: inherit !important;
@@ -326,7 +326,7 @@ a {
   -webkit-background-size: 100% auto;
   -moz-background-size: 100% auto;
   -o-background-size: 100% auto;
-  background-image: url("/src/assets/img/portfolio/8.jpg");
+  background-image: url("../assets/img/portfolio/8.jpg");
 
   @media (max-width: 786px) {
     background-attachment: inherit !important;
