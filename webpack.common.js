@@ -5,7 +5,7 @@ module.exports = {
   /* here you can define another js file */
   entry: {
     index: "./src/js/index.js",
-    another: "./src/js/another.js",
+    lightbox: "./src/js/lightbox-plus-jquery.js",
   },
   output: {
     filename: "[name].[hash:8].js",
@@ -56,6 +56,7 @@ module.exports = {
       },
     ],
   },
+  
 
   devServer: {
     port: 8080,
@@ -79,14 +80,98 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./src/pages/index.html",
       inject: true,
-      chunks: ["index"],
+      chunks: ["index" ,"lightbox"],
       filename: "index.html",
     }),
     new HtmlWebpackPlugin({
-      template: "./src/pages/another.html",
+      template: "./src/pages/about-me.html",
       inject: true,
-      chunks: ["index", "another"],
-      filename: "another.html",
+      chunks: ["index", "lightbox"],
+      filename: "about-me.html",
     }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/kids.html",
+      inject: true,
+      chunks: ["index" ,"lightbox"],
+      filename: "kids.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/offer.html",
+      inject: true,
+      chunks: ["index","lightbox"],
+      filename: "offer.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/start.html",
+      inject: true,
+      chunks: ["index","lightbox"],
+      filename: "start.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/more-to-know.html",
+      inject: true,
+      chunks: ["index","lightbox"],
+      filename: "more-to-know.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/new-life.html",
+      inject: true,
+      chunks: ["index","lightbox"],
+      filename: "new-life.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/opinions.html",
+      inject: true,
+      chunks: ["index","lightbox"],
+      filename: "opinions.html",
+    }),    
+    new HtmlWebpackPlugin({
+      template: "./src/pages/outside.html",
+      inject: true,
+      chunks: ["index","lightbox",],
+      filename: "outside.html",
+    }),   
+      new HtmlWebpackPlugin({
+      template: "./src/pages/portfolio.html",
+      inject: true,
+      chunks: ["index","lightbox"],
+      filename: "portfolio.html",
+    }),    
+    new HtmlWebpackPlugin({
+      template: "./src/pages/artistic.html",
+      inject: true,
+      chunks: ["index","lightbox"],
+      filename: "artistic.html",
+    }),   
+     new HtmlWebpackPlugin({
+      template: "./src/pages/waiting.html",
+      inject: true,
+      chunks: ["index","lightbox"],
+      filename: "waiting.html",
+    }),   
+     new HtmlWebpackPlugin({
+      template: "./src/pages/women.html",
+      inject: true,
+      chunks: ["index","lightbox"],
+      filename: "women.html",
+    }),    
+    new HtmlWebpackPlugin({
+      template: "./src/pages/prepare.html",
+      inject: true,
+      chunks: ["index","lightbox"],
+      filename: "prepare.html",
+    }),
+      new HtmlWebpackPlugin({
+      template: "./src/pages/contact.html",
+      inject: true,
+      chunks: ["index","lightbox"],
+      filename: "contact.html",
+    }),
+        // new HtmlWebpackPlugin({
+    //   template: "./src/pages/aboutme.html",
+    //   inject: true,
+    //   chunks: ["index"],
+    //   filename: "aboutme.html",
+    // }),
   ],
 };
