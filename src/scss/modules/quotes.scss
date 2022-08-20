@@ -15,6 +15,21 @@
         margin: 0 auto;
     }
 
+    &--offer {
+        padding-top: 200px;
+        max-width: 400px;
+        font-size: 20px;
+        opacity: 0.7;
+
+        @media (max-width: 500px) {
+            font-size: 13px;
+            padding: 3px;
+            max-width: 300px;
+            padding-top: 20px;
+            margin: 0 auto;
+        }
+    }
+
     &__centered {
         font-size: 15px;
         padding: 3px;
@@ -41,6 +56,7 @@
                 margin: 0 auto !important;
 
             }
+
 
             &__gallery {
 

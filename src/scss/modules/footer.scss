@@ -2,7 +2,7 @@
     background-color: black;
     color: pink;
     text-decoration-style: solid;
-    text-align: justify;
+    text-align: center;
     margin: 0 auto;
 
     @media (max-width: 500px) {
@@ -36,10 +36,16 @@
     @media (max-width: 500px) {
         text-align: center;
         align-items: center;
+        margin: 0 auto;
 
     }
 }
 
+li {
+    align-items: center;
+    margin: 0 auto;
+
+}
 
 .svg {
     padding-top: 20px;
