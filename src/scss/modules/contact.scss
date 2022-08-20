@@ -44,7 +44,7 @@ select::-ms-expand {
 
 select:-moz-focusring {
   color: transparent !important;
-  text-shadow: 0 0 0 $white;
+  text-shadow: 0 0 0 $pink;
 }
 
 .grid {
@@ -88,8 +88,9 @@ textarea {
   width: 100%;
   line-height: 1.5;
   padding: 15px 10px;
+  opacity: 0.99;
   border: 1px solid $borderFormEls;
-  color: $white;
+  color: $pink;
   background: $bgFormEls;
   transition: background-color 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25),
     transform 0.3s cubic-bezier(0.57, 0.21, 0.69, 1.25);
