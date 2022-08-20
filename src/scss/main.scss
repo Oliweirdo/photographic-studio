@@ -7,6 +7,10 @@
 @import "modules/lightbox.scss";
 @import "modules/portfolio.scss";
 @import "modules/quotes.scss";
+@import "modules/titles.scss";
+@import "modules/navbar.scss";
+@import "modules/footer.scss";
+
 
 
 
@@ -51,54 +55,7 @@ header {
   background-color: black;
 }
 
-.title {
-  font-family: "Cinzel", serif;
-  text-align: center;
-  color: $titlecolor;
-  padding-top: 20px;
-
-  @media (max-width: 500px) {
-    font-size: 20px;
-    overflow: hidden;
-  }
-}
-
-.title__small {
-  font-family: "Cinzel", serif;
-  text-align: center;
-  color: $titlecolor;
-  padding-top: 20px;
-
-  @media (max-width: 500px) {
-    font-size: 15px;
-    overflow: hidden;
-  }
-}
-
-.title__main,
-.subtitle {
-  font-family: "Cinzel", serif;
-  text-align: center;
-  color: $titlecolor;
-  padding-top: 150px;
-  padding-bottom: 20px;
-
-  @media (max-width: 500px) {
-    font-size: 20px;
-    padding-top: 30px;
-  }
-}
-
-.subtitle {
-  padding-top: 200px;
-
-  @media (max-width: 500px) {
-    font-size: 20px;
-    padding-top: 30px;
-  }
-}
-
-.portrait_small {
+.portrait--small {
   padding-top: 70px;
   width: 600px;
   border-bottom: 5px double;
@@ -109,7 +66,7 @@ header {
   }
 }
 
-.portrait__small__main {
+.portrait__main--small {
   padding-top: 70px;
   width: 600px;
   border-bottom: 5px double;
@@ -196,101 +153,6 @@ header {
   }
 }
 
-li {
-  list-style: none;
-  text-transform: uppercase;
-  font-size: smaller;
-  max-width: 300px;
-  margin: 0 auto;
-}
-
-a {
-  color: aliceblue;
-  text-decoration: none;
-  transition: 0.7s ease;
-
-  &:hover {
-    color: $pink;
-  }
-}
-
-.nav {
-  min-height: 70px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 24px;
-  padding-top: 10px;
-  opacity: 0.5;
-  color: $pink;
-  font-family: "Cinzel", serif;
-
-  &-logo {
-    height: 75px;
-    width: auto;
-    justify-content: space-between;
-  }
-
-  &-menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 60px;
-
-    @media (max-width: 500px) {
-      position: fixed;
-      left: -100%;
-      top: 70px;
-      gap: 0;
-      flex-direction: column;
-      background: black;
-      width: 100%;
-      text-align: center;
-      transition: 0.3s;
-
-      &.active {
-        left: 0;
-        position: relative;
-        padding-bottom: 50px;
-      }
-    }
-  }
-
-  &-link {
-    transition: 0.7s ease;
-    font-family: "Cinzel", serif;
-    color: $pink;
-
-    &:hover {
-      color: $pink;
-    }
-  }
-
-  &-item {
-    @media (max-width: 786px) {
-      margin: 16px;
-      background: none;
-    }
-  }
-}
-
-.hamburger {
-  display: none;
-  cursor: pointer;
-}
-
-.bar {
-  display: block;
-  width: 25px;
-  height: 5px;
-  margin: 5px auto;
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-  background-color: white;
-}
-
 
 .mainpage {
   border-radius: 50%;
@@ -356,82 +218,4 @@ a {
 .thanks {
   padding: 150px 50px 150px 50px;
   opacity: 1;
-}
-
-.footer {
-  color: aliceblue;
-  justify-content: space-between;
-  font-family: "Ibarra Real Nova", serif;
-  flex-shrink: 0;
-
-  @media (max-width: 500px) {
-    padding-top: 50px;
-    margin: 0 auto;
-    justify-content: center;
-
-  }
-
-  &__logo {
-    display: block;
-    height: 200px;
-    width: auto;
-    padding-top: 25px;
-    padding-left: 50px;
-
-    @media (max-width: 500px) {
-      width: 200px;
-      height: auto;
-      padding: 0;
-      margin: 0 auto;
-    }
-  }
-}
-
-.col {
-  opacity: 0.5;
-  padding-top: 20px;
-  margin: 0 auto;
-
-  @media (max-width: 500px) {
-    text-align: center;
-    align-items: center;
-
-  }
-}
-
-
-.footer {
-  color: aliceblue;
-  background-color: black;
-  text-decoration-style: solid;
-  text-align: justify;
-  margin: 0 auto;
-
-  @media (max-width: 500px) {
-    text-align: center;
-    margin: 0 auto;
-
-  }
-}
-
-.svg {
-  padding-top: 20px;
-}
-
-@media (max-width: 786px) {
-  .hamburger {
-    display: block;
-  }
-
-  .hamburger.active .bar:nth-child(2) {
-    opacity: 0;
-  }
-
-  .hamburger.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-
-  .hamburger.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
 }

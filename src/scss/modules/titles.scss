@@ -1,0 +1,58 @@
+.title {
+    font-family: "Cinzel", serif;
+    text-align: center;
+    color: $titlecolor;
+    padding-top: 20px;
+
+    @media (max-width: 500px) {
+        font-size: 20px;
+        overflow: hidden;
+    }
+}
+
+.title--small {
+    font-family: "Cinzel", serif;
+    text-align: center;
+    color: $titlecolor;
+    padding-top: 20px;
+
+    @media (max-width: 500px) {
+        font-size: 15px;
+        overflow: hidden;
+    }
+}
+
+.title__opinion {
+    font-family: "Cinzel", serif;
+    text-align: center;
+    color: $titlecolor;
+    padding-top: 20px;
+
+    @media (max-width: 500px) {
+        font-size: 15px;
+        overflow: hidden;
+    }
+}
+
+.title__main,
+.subtitle {
+    font-family: "Cinzel", serif;
+    text-align: center;
+    color: $titlecolor;
+    padding-top: 150px;
+    padding-bottom: 20px;
+
+    @media (max-width: 500px) {
+        font-size: 20px;
+        padding-top: 30px;
+    }
+}
+
+.subtitle {
+    padding-top: 200px;
+
+    @media (max-width: 500px) {
+        font-size: 20px;
+        padding-top: 30px;
+    }
+}
